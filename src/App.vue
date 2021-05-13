@@ -2,11 +2,12 @@
 	<div class="content">
 		<router-link to="/"> Home </router-link>
 		<router-link to="/guide"> Guide </router-link>
-		<router-view v-slot="{ Component }">
-			<transition name="fade" 
-            enter-active-class="animate__animated animate__fadeInLeft"
-            leave-active-class="animate__animated animate__fadeOutLeft"
-            mode="out-in">
+		<router-view v-slot="{ Component, route }">
+			<transition
+				name="fade"
+				:enter-active-class="route.meta.enterClass"
+				:leave-active-class="route.meta.leaveClass"
+			>
 				<component :is="Component" />
 			</transition>
 		</router-view>
@@ -33,6 +34,11 @@
 	position: relative;
 }
 
+.page {
+	position: absolute;
+    top: 30px;
+}
+
 a {
 	font-weight: bold;
 	color: #2c3e50;
@@ -47,11 +53,11 @@ a.router-link-active {
 
 .fade-enter-from,
 .fade-leave-to {
-    opacity: 0;
+	opacity: 0;
 }
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 0.5s ease-in;
+	transition: opacity 0.5s ease-in;
 }
 </style>
