@@ -3,7 +3,7 @@ import Home from '../components/Home.vue'
 import Guide from '../components/Guide.vue'
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/vue3/vue-animated-router-transition/'),
     routes: [
         {
             path: '/',
@@ -21,7 +21,7 @@ const router = createRouter({
                 leaveClass: "animate__animated animate__fadeOutLeft"
             }
         },
-    ]
+    ],
 });
 
 export default router;
