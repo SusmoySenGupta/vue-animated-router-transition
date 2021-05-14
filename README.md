@@ -6,4 +6,4 @@
 Animated router transition for a smoother experience.
 
 ### Demo
-`Link:` <a href="http://susmoycse.com/vue3/vue-animated-router-transition/" target="_blank">vue-drag-and-drop</a>  
+`Link:` <a href="http://susmoycse.com/vue3/vue-animated-router-transition/" target="_blank">vue-animated-router-transition</a>  
